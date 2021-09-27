@@ -78,11 +78,12 @@
         
     }
     
-    .sale h5{
+    .sale h6{
         margin:0px;
         padding:0px;
         color: var(--dark-blue);
         font-weight: 900;
+        font-size:13px;
     }
     
     .sale p{

@@ -78,20 +78,28 @@
         
     }
     
-    .sale h4{
+    .sale h5{
         margin:0px;
         padding:0px;
         color: var(--dark-blue);
         font-weight: 900;
-        font-size:13px;
     }
     
-    .sale p{
+    .sale p:first-child{
+        margin: 0px;
+        padding: 0;
+        letter-spacing: -0.9px;
+        font-weight: 800;
+        margin: -3px;
+    }
+
+    .sale p:last-child{
         color:var(--desaturated-blue);
         margin: 0px;
         padding: 0;
         letter-spacing: -0.9px;
     }
+    
     
     .sale .link{
         display: flex;
@@ -104,7 +112,8 @@
     }
     
     .sale .link a{
-        color:var(--bright-blue)
+        color:var(--bright-blue);
+        font-size: 15px;
     }
     /* End Sales */
     /* Start Submiting */

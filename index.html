@@ -1,147 +1,48 @@
-/* Start - Variables*/
-:root{
-    --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: hsl(245, 75%, 52%);
-    --very-pale-blue: hsl(225, 100%, 98%);
-    --desaturated-blue: hsl(224, 23%, 55%);
-    --dark-blue: hsl(223, 47%, 23%);
-    --Font-p-size: 16px;
-    --main-margin:30px;
-    --main-width:310px;
-    
-    }
-    /*End - Variables */
-    
-    /* Start Card */
-    body{
-        background-image: url('https://cdn.glitch.com/69ac10af-1e90-40bb-ae17-76cf2eefeee3%2Fpattern-background-desktop.svg?v=1632744066303');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-color: var(--pale-blue) ;
-        font-family:'Red Hat Display', sans-serif;
-        min-height: 100vh;
-    }
-    
-    .parent{
-        position: absolute;
-        left:50%;
-        top:50%;
-        transform: translate(-50% , -50%);
-        text-align: center;
-    }
-    
-    .parent .container{
-        background-color:var(--very-pale-blue);
-        width: 400px;
-        border-radius: 15px;
-    }
-    
-    .parent .container .elemnts .image img{
-        width: 400px;
-        border-top-left-radius:20px;
-        border-top-right-radius:20px;
-    }
-    
-    .parent .container .text h2{
-        margin:var(--main-margin) 0px;
-        font-weight: 800px;
-    }
-    
-    .parent .container .text p{
-        width: var(--main-width);
-        margin: auto;
-        text-align: center;
-        color: var(--desaturated-blue);
-        line-height: 1.6;
-    }
-    /* Start Sales =====================================================================*/
-    .sale{
-        display:grid;
-        grid-template-columns: repeat(4 , calc(310px / 4));
-        grid-template-rows: 48px;
-        margin: 30px auto;
-        width:var(--main-width);
-        padding: 20px 5px;
-        background-color:var(--very-pale-blue);
-    }
-    
-    .sale .img{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .sale .price{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        
-    }
-    
-    .sale h5{
-        margin:0px;
-        padding:0px;
-        color: var(--dark-blue);
-        font-weight: 900;
-    }
-    
-    .sale p{
-        color:var(--desaturated-blue);
-        margin: 0px;
-        padding: 0;
-        letter-spacing: -0.9px;
-    }
-    
-    .sale .link{
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        grid-row: 1;
-        grid-column: 4;
-        font-weight: 700;
-        color:var(--bright-blue);
-    }
-    
-    .sale .link a{
-        color:var(--bright-blue);
-        font-size: 15px;
-    }
-    /* End Sales */
-    /* Start Submiting */
-    .button button:first-of-type{
-        font-weight: 500;
-        width: 300px;
-        padding: 15px;
-        color: white;
-        border-radius: 10px;
-        border: none;
-        background-color:var(--bright-blue);
-        box-shadow:0px 9px 12px -6.5px var(--bright-blue);
-        cursor: pointer;
-        font-size: 15px;
-        transition-duration: 0.5s;
-    }
-    
-    .button button:first-of-type:hover{
-        transform: scale(1.1);
-        box-shadow: 0px 9px 12px 1px var(--bright-blue);
-        opacity: 80%;
-    }
-    
-    
-    .button button:last-of-type{
-        border: none;
-        margin: 30px 0 50px;
-        font-weight: 700;
-        color:var(--desaturated-blue);
-        background-color:transparent;
-        cursor: pointer;
-        transition-duration: 0.5s
-    }
-    
-    .button button:last-of-type:hover{
-        transform: scale(1.1);
-        opacity: 30%;
-    
-    }
-    /* End Submiting */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>Order summary component</title>
+</head>
+<body>
+    <main>    
+        <div class="parent">
+            <div class="container">
+                <div class="elemnts">
+                    <div class="image">
+                        <img src="../tools/images/illustration-hero.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Order Summary</h2>
+                        <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+                        </p> 
+                    </div>
+                    <!-- Sales -->
+                    <div class="sale">
+                        <div class="img">
+                            <img src="../tools/images/icon-music.svg" alt="">
+                        </div>
+                        <div class="price">
+                            <h5>Annual Plan</h5> 
+                            <p>$59.99/year</p>
+                        </div>
+                        <div class="link">
+                        <a href="">Change</a>
+                        </div>
+                    </div>
+                    <!-- End Sales -->
+                    <div class="button">
+                        <button>Proceed to Payment</button>
+                        <button>Cancel Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>         
+</body>
+</html>
